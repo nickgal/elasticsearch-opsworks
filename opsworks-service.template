@@ -4,7 +4,7 @@
         "CookbookRepo": {
             "Description": "GitURL",
             "Type": "String",
-            "Default": "https://github.com/ThoughtWorksStudios/opsworks-elasticsearch-cookbook"
+            "Default": "https://github.com/nickgal/opsworks-elasticsearch-cookbook"
         },
 
         "CookbookRepoRevision": {
@@ -170,7 +170,7 @@
                 },
                 "CustomJson": {
                     "java": {
-                        "jdk_version": "7",
+                        "jdk_version": "8",
                         "oracle": {
                             "accept_oracle_download_terms": "true"
                         },
@@ -189,9 +189,7 @@
                     "elasticsearch": {
                         "version": { "Ref": "ElasticSearchVersion" },
                         "plugins" : {
-                            "elasticsearch/elasticsearch-cloud-aws": {
-                                "version": { "Ref": "ElasticSearchAWSCloudPluginVersion" }
-                            }
+                            "cloud-aws": {}
                         },
                         "nginx": {
                             "users": [{
